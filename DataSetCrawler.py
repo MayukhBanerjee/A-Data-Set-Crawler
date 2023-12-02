@@ -1,11 +1,11 @@
-def input_books(sentence):
+def input_items(sentence):
     words = sentence.split()
     words_list = []
     for word in words:
         words_list.append(word)
     return words_list
 
-def search_books(list_of_words_lists, query):
+def search_items(list_of_words_lists, query):
     for i in range (0, len(list_of_words_lists)): 
         for j in range (0,len(list_of_words_lists[i])):
             elements = tuple(list_of_words_lists[i])
@@ -21,10 +21,10 @@ list_of_words_lists = []
 
 sentence = input("Enter a sentence: ")
 while sentence != "END":
-    words_list = input_books(sentence)
+    words_list = input_items(sentence)
     list_of_words_lists.append(words_list)
 
     sentence = input("Enter another sentence (or 'END' to finish): ")
 
 query = input("Enter the query: ")
-search_books(list_of_words_lists, query)
+search_items(list_of_words_lists, query)
